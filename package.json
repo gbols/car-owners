@@ -1,0 +1,43 @@
+{
+  "name": "assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/runtime": "^7.10.1",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "@babel/register": "^7.10.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.1.0",
+    "install": "^0.13.0",
+    "istanbul": "^0.4.5",
+    "jest": "^26.0.1",
+    "mocha": "^7.2.0",
+    "nyc": "^15.0.1"
+  },
+  "reporter": [
+    "lcov",
+    "text"
+  ],
+  "scripts": {
+    "start": "NODE_ENV=production node bin/www.js",
+    "test": "nyc mocha --require @babel/register",
+    "coveralls": "nyc npm test && nyc report --reporter=lcov --reporter=text --reporter=lcovonly || coveralls",
+    "dev": "nodemon bin/www.js",
+    "seed": "node -r esm src/seeders/userSeed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
