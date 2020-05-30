@@ -35,7 +35,7 @@ export default class UserController {
       newData.car_color = {"$in": data.colors}
     }
 
-    const result = await UserService.filterCars(newData, skip = 0, limit = 10);
+    const result = await UserService.filterCars(newData, skip, limit);
     if(!result.length) {
       return res.status(404).send({
         success: false,
