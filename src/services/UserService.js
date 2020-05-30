@@ -5,7 +5,7 @@ export default class UserService {
      return User.findOne({id});
   }
 
-  static async filterCars(filter, skip, limit){
+  static async filterCars(filter, skip = 0, limit = 10){
     skip = Number(skip);
     limit = Number(limit);
     
