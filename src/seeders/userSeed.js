@@ -5,7 +5,6 @@ import { User } from '../models'
 
 const file = 'src/seeders/car_ownsers_data.csv';
 
-
 const seedDatabase = async (file) => {
     try {
       const csvData = await csvtojson().fromFile(file);
