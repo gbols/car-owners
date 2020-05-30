@@ -7,4 +7,6 @@ const userRouter = Router();
 
 userRouter.get('/user/:id', asyncMiddleware(UserController.getSpecificUser));
 
+userRouter.post('/filter', asyncMiddleware(UserController.filterCarsOfOwners));
+
 export { userRouter };

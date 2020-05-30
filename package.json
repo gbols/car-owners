@@ -36,7 +36,8 @@
     "test": "NODE_ENV=test npm run seed && NODE_ENV=test nyc mocha --require @babel/register",
     "coveralls": "nyc report --reporter=lcov --reporter=text --reporter=lcovonly || coveralls",
     "dev": "nodemon bin/www.js",
-    "seed": "node -r esm src/seeders/userSeed.js"
+    "seed": "node -r esm src/seeders/userSeed.js",
+    "test-dev": "NODE_ENV=test NODE_ENV=test nyc mocha --require @babel/register"
   },
   "keywords": [],
   "author": "",
