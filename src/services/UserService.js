@@ -9,6 +9,6 @@ export default class UserService {
     skip = Number(skip);
     limit = Number(limit);
     
-    return User.find(filter).skip(skip * limit).limit(limit);
+    return User.find(filter);
   }
 }

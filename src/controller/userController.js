@@ -1,6 +1,5 @@
 import UserService from '../services/UserService';
 
-
 export default class UserController {
   static async getSpecificUser(req, res, next) {
     const { id } = req.params;
@@ -35,6 +34,8 @@ export default class UserController {
       newData.car_color = {"$in": data.colors}
     }
 
+    // console.log({data, newData});
+    console.log('i was called')
     const result = await UserService.filterCars(newData, skip, limit);
     if(!result.length) {
       return res.status(404).send({
